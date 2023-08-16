@@ -4,9 +4,11 @@ namespace Alura\Banco\Modelo\Funcionario;
 use Alura\Banco\Modelo\CPF;
 use Alura\Banco\Modelo\Pessoa;
 
-class Desenvolvedor extends Funcionario
+class Editor extends Funcionario
 {
     public function calculaBonificacao(){
-        $this->recebeAumento($this->getSalario() + 500);
+        return 600;
     }
+
+   
 }

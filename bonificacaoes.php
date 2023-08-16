@@ -6,16 +6,17 @@ use Alura\Banco\Modelo\Funcionario\Funcionario;
 use Alura\Banco\Modelo\Funcionario\Gerente;
 use Alura\Banco\Modelo\Funcionario\Diretor;
 use Alura\Banco\Modelo\Funcionario\Desenvolvedor;
+use Alura\Banco\Modelo\Funcionario\Editor;
 
 require_once 'autoload.php';
 
-$funcionario = new Desenvolvedor(
+$desenvolvedor = new Desenvolvedor(
     'Kenzo', new CPF('151252512810'),
      1000
 );
 
 
-$funcionaria = new Gerente(
+$gerente = new Gerente(
     'Sayuri',
     new CPF('98426715415'),
     3000
@@ -27,10 +28,16 @@ $diretor =  new Diretor(
     5000
 );
 
-$funcionario->promocao();
+$editor =  new Editor(
+    'Nely',
+    new CPF('12584154515'),
+    1500
+);
+
 $controlador = new ControladorDeBonificacoes();
-$controlador->adicionaBonificacao($funcionario);
-$controlador->adicionaBonificacao($funcionaria);
+$controlador->adicionaBonificacao($desenvolvedor);
+$controlador->adicionaBonificacao($gerente);
 $controlador->adicionaBonificacao($diretor);
+$controlador->adicionaBonificacao($editor);
 
 echo $controlador->getTotalDeBonificacoes();

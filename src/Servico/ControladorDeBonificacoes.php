@@ -1,6 +1,6 @@
 <?php
 
-namespace Alura\Banco\Modelo\Servico;
+namespace Alura\Banco\Servico;
 
 use Alura\Banco\Modelo\Funcionario\Funcionario;
 
